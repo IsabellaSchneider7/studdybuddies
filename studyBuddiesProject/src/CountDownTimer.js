@@ -8,6 +8,7 @@ const CountDownTimer = ({hoursMinSecs}) => {
     const { hours = 0, minutes = 0, seconds = 60 } = hoursMinSecs;
     const [[hrs, mins, secs], setTime] = React.useState([hours, minutes, seconds]);
     const [pageColour, setPageColour] = React.useState("#CA5130")
+    const [pomoText, setPomoText] = React.useState("STUDY TIME");
     
     
     const tick = () => {
@@ -39,28 +40,16 @@ const CountDownTimer = ({hoursMinSecs}) => {
         if(counter % 2 === 1){
             //on even counter vals take study
             setTime([parseInt(studyHours), parseInt(studyMinutes), parseInt(studySeconds)]);
-            setPageColour("#27B4CA");
-            return (
-                <h1>
-                    "STUDY TIME"
-                </h1>
-            )
+            setPageColour("#CA5130");
+            setPomoText("STUDY TIME");
         }
         else {
             //on odd counter vals break
             setTime([parseInt(breakHours), parseInt(breakMinutes), parseInt(breakSeconds)]);
-            setPageColour("#CA5130");
-            return(
-                <h1>
-                    "BREAK TIME"
-                </h1>
-            )
+            setPageColour("#27ca6e");
+            setPomoText("BREAK TIME");
         }
 
-
-        // return(
-        //     <PlaySound playStatus = "PLAYING"/>
-        // )
 
     }
 
@@ -73,6 +62,7 @@ const CountDownTimer = ({hoursMinSecs}) => {
 
     return (
         <div style = {{backgroundColor: pageColour}}>
+            <h1>{pomoText}</h1>
             <p>{`${hrs.toString().padStart(2, '0')}:${mins
             .toString()
             .padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</p> 
