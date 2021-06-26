@@ -1,5 +1,5 @@
 import React from 'react';
-import Queue from "./Queue"
+import VideoChat from './VideoChat';
 import './App.css';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
@@ -28,7 +28,7 @@ const App = () => {
         <h1>StuddyBuddies</h1>
       </header>
       <section >
-        {user ? <Queue /> : <SignIn />}
+        {user ? <VideoChat /> : <SignIn />}
       </section>
         <footer>
         <p>
