@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css';
 
 var counter = 1
 const CountDownTimer = ({hoursMinSecs}) => {
@@ -54,14 +55,14 @@ const CountDownTimer = ({hoursMinSecs}) => {
     });
 
 
-     
     return (
-        <div >
+        <div>
             <p>{`${hrs.toString().padStart(2, '0')}:${mins
             .toString()
             .padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</p> 
         </div>
     );
+
 }
 
 
