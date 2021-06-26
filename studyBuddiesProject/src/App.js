@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import VideoChat from './VideoChat';
 import './App.css';
 import firebase from 'firebase/app';
@@ -6,6 +6,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
+
 
 firebase.initializeApp({
     apiKey: "AIzaSyAhQPXLX-dGfBbu6LwK1NqWX7dDGovnP1g",
@@ -21,12 +22,14 @@ const auth = firebase.auth();
 const firestore = firebase.firestore();
 
 const App = () => {
+
   const[user] = useAuthState(auth);
   return (
     <div className="app">
       <header>
         <h1>StuddyBuddies</h1>
       </header>
+      
       <section >
         {user ? <VideoChat /> : <SignIn />}
       </section>
