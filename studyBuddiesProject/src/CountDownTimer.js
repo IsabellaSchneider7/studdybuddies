@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css';
+import PlaySound from "./PlaySound";
 
 var counter = 1
 const CountDownTimer = ({hoursMinSecs}) => {
@@ -29,7 +30,7 @@ const CountDownTimer = ({hoursMinSecs}) => {
 
     const studyHours = "0";
     const studyMinutes = "0";
-    const studySeconds = "30";
+    const studySeconds = "5";
     const breakHours = "0";
     const breakMinutes = "0";
     const breakSeconds = "10";
@@ -39,12 +40,27 @@ const CountDownTimer = ({hoursMinSecs}) => {
             //on even counter vals take study
             setTime([parseInt(studyHours), parseInt(studyMinutes), parseInt(studySeconds)]);
             setPageColour("#27B4CA");
+            return (
+                <h1>
+                    "STUDY TIME"
+                </h1>
+            )
         }
         else {
             //on odd counter vals break
             setTime([parseInt(breakHours), parseInt(breakMinutes), parseInt(breakSeconds)]);
             setPageColour("#CA5130");
+            return(
+                <h1>
+                    "BREAK TIME"
+                </h1>
+            )
         }
+
+
+        // return(
+        //     <PlaySound playStatus = "PLAYING"/>
+        // )
 
     }
 

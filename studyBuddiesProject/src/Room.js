@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Participant from "./Participant";
-import CountDownTimer from './CountdDownTimer';
+import CountDownTimer from './CountDownTimer';
 
 const Room = ({ roomName, room, handleLogout }) => {
   const [participants, setParticipants] = useState([]);
-  const hoursMinSecs = {hours:0, minutes: 0, seconds: 30}
+  const hoursMinSecs = {hours:0, minutes: 0, seconds: 5}
 
   useEffect(() => {
     const participantConnected = (participant) => {
