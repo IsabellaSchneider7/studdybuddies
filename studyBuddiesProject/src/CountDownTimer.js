@@ -72,7 +72,7 @@ const CountDownTimer = ({hoursMinSecs}) => {
 
 
     return (
-        <div>
+        <div style = {{backgroundColor: pageColour}}>
             <p>{`${hrs.toString().padStart(2, '0')}:${mins
             .toString()
             .padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</p> 
