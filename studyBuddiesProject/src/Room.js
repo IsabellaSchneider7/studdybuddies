@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Participant from "./Participant";
+import firestore from "./App";
+import useCollectionData from "./App";
 
 const Room = ({ roomName, room, handleLogout }) => {
+  const messagesRef = firestore.collection('messages');
+  const query = messagesRef.orderBy('createdAt').limit(25);
+  const [messages] = useCollectionData(query, {idField:'id'});
   const [participants, setParticipants] = useState([]);
 
   useEffect(() => {
@@ -41,6 +46,9 @@ const Room = ({ roomName, room, handleLogout }) => {
         ) : (
           ""
         )}
+      </div>
+      <div className="ChatBox">
+
       </div>
       <h3>Remote Participants</h3>
       <div className="remote-participants">{remoteParticipants}</div>
