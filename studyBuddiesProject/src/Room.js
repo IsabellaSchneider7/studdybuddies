@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Participant from "./Participant";
 import CountDownTimer from './CountDownTimer';
+import PlaySound from "./PlaySound"
 
 const Room = ({ roomName, room, handleLogout }) => {
   const [participants, setParticipants] = useState([]);
@@ -37,6 +38,7 @@ const Room = ({ roomName, room, handleLogout }) => {
       </header>
       <h2>Room: {roomName}</h2>
       <button onClick={handleLogout}>Log out</button>
+      <PlaySound/>
       <div className="local-participant">
         {room ? (
           <Participant
