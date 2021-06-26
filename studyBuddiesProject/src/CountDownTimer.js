@@ -34,7 +34,7 @@ const CountDownTimer = ({hoursMinSecs}) => {
     const studySeconds = "5";
     const breakHours = "0";
     const breakMinutes = "0";
-    const breakSeconds = "10";
+    const breakSeconds = "20";
 
     const reset = () => {
         if(counter % 2 === 1){
