@@ -37,7 +37,9 @@ const Room = ({ roomName, room, handleLogout }) => {
         <CountDownTimer  hoursMinSecs = {hoursMinSecs}/>
       </header>
       <h2>Room: {roomName}</h2>
-      <button onClick={handleLogout}>Log out</button>
+      <div className = "logoutButton">
+        <button onClick={handleLogout}>Log out</button>
+      </div>
       <PlaySound/>
       <div className="local-participant">
         {room ? (

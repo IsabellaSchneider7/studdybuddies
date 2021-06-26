@@ -85,7 +85,7 @@ button:hover {
 .room {
   position: relative;
 }
-.room button {
+.logoutButton {
   position: absolute;
   top: 0;
   right: 20px;
@@ -140,4 +140,12 @@ footer {
 
 footer a {
   color: #fff;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.playButton {
+  justify-content: space-around;
 }
