@@ -1,4 +1,9 @@
 import React from "react";
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+
+const auth = firebase.auth();
 
 const Lobby = ({
   username,
@@ -37,7 +42,9 @@ const Lobby = ({
 
       <button type="submit" disabled={connecting}>
         {connecting ? "Connecting" : "Join"}
-      </button>
+      </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button onClick={() => auth.signOut()}> SignOut</button>
+      <h1> </h1>
     </form>
   );
 };
