@@ -1,6 +1,6 @@
 import React from 'react';
+import Queue from "./Queue"
 import './App.css';
-import VideoChat from './VideoChat';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
@@ -25,7 +25,7 @@ const App = () => {
   return (
     <div className="app">
       <header>
-        <h1>Video Chat with Hooks</h1>
+        <h1>StuddyBuddies</h1>
       </header>
       <section >
         {user ? <Queue /> : <SignIn />}
@@ -57,16 +57,7 @@ function SignOut(){
   )
 }
 
-function Queue(){
-  <div>
-  <header>
-        <h1>Video Chat with Hooks</h1>
-      </header>
-      <main>
-        <VideoChat />
-      </main>
-      </div>
-}
+
 function ChatRoom(){
   const messagesRef = firestore.collection('messages');
   const query = messagesRef.orderBy('createdAt').limit(25);
