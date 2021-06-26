@@ -25,21 +25,5 @@ const App = () => {
   );
 }
 
-// function SignIn()
-// {
-//   const signInWithGoogle = () => {
-//     const provider = new firebaseRef.auth.GoogleAuthProvider();
-//     auth.signInWithPopup(provider);
-//   }
-//   return(
-//     <button onClick={signInWithGoogle}>Sign in with Google</button>
-//   )
-// }
-
-// function SignOut(){
-//   return auth.currentUser &&(
-//   <button onClick={() => auth.signOut()}> SignOut</button>
-//   )
-// }
 
 export default App;

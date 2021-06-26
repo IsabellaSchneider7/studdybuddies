@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import Participant from "./Participant";
 import firestore from "./App";
 import useCollectionData from "./App";
+import CountDownTimer from './CountDownTimer';
 
 const Room = ({ roomName, room, handleLogout }) => {
   const messagesRef = firestore.collection('messages');
   const query = messagesRef.orderBy('createdAt').limit(25);
   const [messages] = useCollectionData(query, {idField:'id'});
   const [participants, setParticipants] = useState([]);
+  const hoursMinSecs = {hours:0, minutes: 0, seconds: 5}
 
   useEffect(() => {
     const participantConnected = (participant) => {
@@ -35,6 +37,9 @@ const Room = ({ roomName, room, handleLogout }) => {
 
   return (
     <div className="room">
+      <header>
+        <CountDownTimer  hoursMinSecs = {hoursMinSecs}/>
+      </header>
       <h2>Room: {roomName}</h2>
       <button onClick={handleLogout}>Log out</button>
       <div className="local-participant">

@@ -11,8 +11,10 @@
     "react-dom": "^16.14.0",
     "react-firebase-hooks": "^3.0.4",
     "react-scripts": "^4.0.1",
+    "react-sound": "^1.2.0",
     "twilio": "^3.54.2",
-    "twilio-video": "^2.10.0"
+    "twilio-video": "^2.10.0",
+    "use-sound": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
