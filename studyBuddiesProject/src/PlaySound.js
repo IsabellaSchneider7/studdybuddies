@@ -3,11 +3,17 @@ import useSound from "use-sound";
 
 function PlaySound() {
   const soundUrl = "/drumSound1.wav";
+  const soundUrl2 = "/saxSound.wav";
+  const soundUrl3 = "/trumpetSound.wav";
+  const soundUrl4 = "/guitarSound.wav";
 
   const [play] = useSound(soundUrl);
+  const [play2] = useSound(soundUrl2);
+  const [play3] = useSound(soundUrl3);
+  const [play4] = useSound(soundUrl4);
 
   function playSound1() {
-    alert("You clicked me!");
+    play4();
   }
 
   function playSound2() {
@@ -15,11 +21,11 @@ function PlaySound() {
   }
 
   function playSound3() {
-    alert("you click button");
+    play2();
   }
 
   function playSound4() {
-    alert("you click button");
+    play3();
   }
 
   return (
