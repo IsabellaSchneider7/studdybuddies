@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import PlaySound from "./PlaySound";
+//import PlaySound from "./PlaySound";
 
 var counter = 1;
 const CountDownTimer = ({ hoursMinSecs }) => {
