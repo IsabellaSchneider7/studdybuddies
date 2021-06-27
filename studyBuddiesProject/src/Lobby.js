@@ -1,5 +1,5 @@
 import React from "react";
-
+import SignOut from "./SignOut";
 
 const Lobby = ({
   username,
@@ -39,7 +39,7 @@ const Lobby = ({
       <button type="submit" disabled={connecting}>
         {connecting ? "Connecting" : "Join"}
       </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button> SignOut</button>
+      <SignOut />
       <h1> </h1>
     </form>
   );
