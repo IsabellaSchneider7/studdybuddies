@@ -3,14 +3,11 @@ import Video from "twilio-video";
 import Lobby from "./Lobby";
 import Room from "./Room";
 
-
 const VideoChat = () => {
   const [username, setUsername] = useState("");
   const [roomName, setRoomName] = useState("");
   const [room, setRoom] = useState(null);
   const [connecting, setConnecting] = useState(false);
-  
-
 
   const handleUsernameChange = useCallback((event) => {
     setUsername(event.target.value);
@@ -86,7 +83,6 @@ const VideoChat = () => {
       <div>
         <Room roomName={roomName} room={room} handleLogout={handleLogout} />
       </div>
-   
     );
   } else {
     render = (
